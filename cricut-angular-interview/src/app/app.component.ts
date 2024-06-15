@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, NavigationEnd, RouterModule } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import {CommonModule} from "@angular/common";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.less'
+  styleUrls: ['./app.component.less'],
+  standalone: true,
+  imports: [RouterModule, CommonModule] // Import RouterModule here
 })
 export class AppComponent {
   title = 'cricut-angular-interview';
+  showPlaceholder = true;
+
+  constructor(private router: Router) {
+    this.router.events.pipe(
+      filter((event): event is NavigationEnd => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.showPlaceholder = event.urlAfterRedirects !== '/assessment';
+    });
+  }
 }

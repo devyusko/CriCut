@@ -176,7 +176,7 @@
     }
   }
 </style>
-
+<div *ngIf="showPlaceholder">
 <main class="main">
   <div class="content">
     <div class="left-side">
@@ -237,13 +237,11 @@
           { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
           { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
           { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
-          { title: 'CriCut Interview Assessment', link: 'https://www.google.com'}
+          { title: 'CriCut Interview Assessment', link: '/assessment'}
         ]; track item.title) {
           <a
             class="pill"
-            [href]="item.link"
-            target="_blank"
-            rel="noopener"
+            href="{{ item.link }}"
           >
             <span>{{ item.title }}</span>
             <svg
@@ -324,7 +322,7 @@
     </div>
   </div>
 </main>
-
+</div>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
