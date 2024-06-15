@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import {RouterOutlet} from "@angular/router";
+import {HeaderComponent} from "./header.component";
+
 
 @Component({
   selector: 'app-assessment',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    HeaderComponent,
+  ],
   templateUrl: './assessment.component.html',
   styleUrl: './assessment.component.less'
 })
