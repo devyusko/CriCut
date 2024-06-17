@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {HeaderComponent} from "./header/header.component";
 import {UserComponent} from "./user/user.component";
+import {MOCK_USERS} from "./mock-users";
 
 
 @Component({
@@ -14,5 +15,5 @@ import {UserComponent} from "./user/user.component";
   styleUrl: './assessment.component.less'
 })
 export class AssessmentComponent {
-
+  users = MOCK_USERS;
 }

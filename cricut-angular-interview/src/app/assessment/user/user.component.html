@@ -1,6 +1,10 @@
 <div>
-  <button>
-    <img src="" alt="">
-    <span>NAME</span>
+  <button (click)="onSelectUser()">
+    <img
+      [src]="imageSrc"
+      [alt]="name"
+    />
+<!--    have to call the signal value as a function. You must execute the property as a function-->
+    <span>{{ name }}</span>
   </button>
 </div>
