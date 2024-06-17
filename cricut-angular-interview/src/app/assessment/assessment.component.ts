@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {HeaderComponent} from "./header.component";
+import {HeaderComponent} from "./header/header.component";
+import {UserComponent} from "./user/user.component";
 
 
 @Component({
@@ -7,6 +8,7 @@ import {HeaderComponent} from "./header.component";
   standalone: true,
   imports: [
     HeaderComponent,
+    UserComponent
   ],
   templateUrl: './assessment.component.html',
   styleUrl: './assessment.component.less'
