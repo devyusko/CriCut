@@ -1,4 +1,4 @@
-import {Component, Input} from "@angular/core";
+import {Component, EventEmitter, Input, Output} from "@angular/core";
 
 type TDetails = {
   id: string,
@@ -16,4 +16,10 @@ type TDetails = {
 })
 export class UserDetailComponent {
   @Input({ required:true }) detail!: TDetails;
+  @Output() complete = new EventEmitter<string>();
+
+  onDelete() {
+    this.complete.emit(this.detail.id);
+    console.log(this.detail.id);
+  }
 }

@@ -10,7 +10,7 @@
   <ul>
     @for (detail of selectedUserDetails; track detail.id) {
       <li>
-        <app-user-detail [detail]="detail"></app-user-detail>
+        <app-user-detail [detail]="detail" (complete)="onDelete($event)"></app-user-detail>
       </li>
     }
   </ul>

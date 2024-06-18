@@ -42,4 +42,8 @@ export class UserInformationComponent {
   get selectedUserDetails() {
     return this.userDetails.filter((userDetails) => userDetails.userId === this.id);
   }
+
+  onDelete(id: string) {
+    this.userDetails = this.userDetails.filter((detail) => detail.id != id );
+  }
 }
