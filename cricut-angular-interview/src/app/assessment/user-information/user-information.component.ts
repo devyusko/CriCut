@@ -1,6 +1,7 @@
 import {Component, Input} from "@angular/core";
 import {UserDetailComponent} from "./user-detail/user-detail.component";
 import {AddDetailComponent} from "./add-detail/add-detail.component";
+import {type TAddDetail} from "./add-detail/add-detail.model";
 
 @Component({
   selector: 'app-user-information',
@@ -56,6 +57,17 @@ export class UserInformationComponent {
   }
 
   onCancel() {
+    this.isAddDetail = false;
+  }
+
+  onAdd(addDetail: TAddDetail) {
+    this.userDetails.push({
+      id: new Date().getTime().toString(),
+      userId: this.id,
+      title: addDetail.title,
+      summary: addDetail.summary,
+      dueDate: addDetail.date
+    });
     this.isAddDetail = false;
   }
 }
