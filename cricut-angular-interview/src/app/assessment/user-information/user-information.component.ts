@@ -1,18 +1,22 @@
 import {Component, Input} from "@angular/core";
 import {UserDetailComponent} from "./user-detail/user-detail.component";
+import {AddDetailComponent} from "./add-detail/add-detail.component";
 
 @Component({
   selector: 'app-user-information',
   styleUrls: ['user-information.component.less'],
   templateUrl: 'user-information.component.html',
   imports: [
-    UserDetailComponent
+    UserDetailComponent,
+    AddDetailComponent
   ],
   standalone: true
 })
 export class UserInformationComponent {
   @Input({ required: true }) id!: string;
   @Input({ required: true }) name!: string;
+
+  isAddDetail = false;
   userDetails = [
     {
       id: 't1',
@@ -45,5 +49,13 @@ export class UserInformationComponent {
 
   onDelete(id: string) {
     this.userDetails = this.userDetails.filter((detail) => detail.id != id );
+  }
+
+  onAddDetail() {
+    this.isAddDetail = true;
+  }
+
+  onCancel() {
+    this.isAddDetail = false;
   }
 }

@@ -1,8 +1,11 @@
+@if (isAddDetail) {
+  <app-add-detail (cancel)="onCancel()" />
+}
 <section id="user">
   <header>
     <h2>{{ name }}'s Information</h2>
     <menu>
-      <button>
+      <button (click)="onAddDetail()">
         Add Info
       </button>
     </menu>
