@@ -2,6 +2,12 @@ import {Component, EventEmitter, Input, output, Output} from '@angular/core';
 // import { MOCK_USERS } from '../mock-users'
 import {NgForOf} from "@angular/common";
 
+type User = {
+  id: string;
+  avatar: string;
+  name: string;
+}
+
 // const randomIndex = Math.floor(Math.random() * MOCK_USERS.length);
 
 @Component({
@@ -14,9 +20,7 @@ import {NgForOf} from "@angular/common";
   styleUrl: './user.component.less'
 })
 export class UserComponent {
-  @Input({ required: true }) id!: string;
-  @Input({ required: true }) avatar!: string;
-  @Input({ required: true }) name!: string;
+  @Input({ required: true }) user!: User;
   @Output() select = new EventEmitter<string>();
   // output function signal
   // eventEmitter done automatically when using output function
@@ -32,10 +36,10 @@ export class UserComponent {
     // const randomIndex = Math.floor(Math.random() * MOCK_USERS.length);
     // the set method updates the signal
     // this.selectUser.set(MOCK_USERS[randomIndex]);
-    this.select.emit(this.id);
+    this.select.emit(this.user.id);
   }
 
   get imageSrc() {
-    return '/users/' + this.avatar;
+    return '/users/' + this.user.avatar;
   }
 }

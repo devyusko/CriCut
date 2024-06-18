@@ -2,9 +2,9 @@
   <button (click)="onSelectUser()">
     <img
       [src]="imageSrc"
-      [alt]="name"
+      [alt]="user.name"
     />
 <!--    have to call the signal value as a function. You must execute the property as a function-->
-    <span>{{ name }}</span>
+    <span>{{ user.name }}</span>
   </button>
 </div>

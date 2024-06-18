@@ -18,7 +18,7 @@ import {UserInformationComponent} from "./user-information/user-information.comp
 })
 export class AssessmentComponent {
   users = MOCK_USERS;
-  selectedUserId = 'u1';
+  selectedUserId?: string;
 
   get selectedUser() {
     return this.users.find((user) => user.id === this.selectedUserId)!;
