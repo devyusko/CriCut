@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, output, Output} from '@angular/core';
 // import { MOCK_USERS } from '../mock-users'
 import {NgForOf} from "@angular/common";
+import {CardComponent} from "../shared/card/card.component";
 
 type User = {
   id: string;
@@ -14,7 +15,8 @@ type User = {
   selector: 'app-user',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    CardComponent
   ],
   templateUrl: './user.component.html',
   styleUrl: './user.component.less'
