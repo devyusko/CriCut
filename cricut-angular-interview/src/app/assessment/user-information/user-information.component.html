@@ -1,1 +1,18 @@
-<h2>{{ name }}</h2>
+<section id="user">
+  <header>
+    <h2>{{ name }}'s Information</h2>
+    <menu>
+      <button>
+        Add Info
+      </button>
+    </menu>
+  </header>
+  <ul>
+    @for (detail of selectedUserDetails; track detail.id) {
+      <li>
+        <app-user-detail [detail]="detail"></app-user-detail>
+      </li>
+    }
+  </ul>
+</section>
+

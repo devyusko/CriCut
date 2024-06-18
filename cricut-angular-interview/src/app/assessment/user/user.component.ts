@@ -21,6 +21,7 @@ type User = {
 })
 export class UserComponent {
   @Input({ required: true }) user!: User;
+  @Input({ required: true }) selected!: boolean;
   @Output() select = new EventEmitter<string>();
   // output function signal
   // eventEmitter done automatically when using output function
