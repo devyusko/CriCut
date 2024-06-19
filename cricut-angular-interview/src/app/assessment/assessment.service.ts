@@ -7,7 +7,7 @@ import {Post} from "./post.model";
   providedIn: 'root'
 })
 export class AssessmentService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/users';
+  private apiUrl = 'https://jsonplaceholder.typicode.com';
 
   constructor(private http: HttpClient) {}
 
