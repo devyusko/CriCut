@@ -1,3 +1,6 @@
+/**
+ * interface objects for User and Post
+ */
 export interface User {
     id: string,
     name: string,

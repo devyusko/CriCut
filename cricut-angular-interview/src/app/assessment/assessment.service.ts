@@ -3,6 +3,9 @@ import {HttpClient} from "@angular/common/http";
 import {forkJoin, Observable} from "rxjs";
 import {Post, User} from "./post.model";
 
+/**
+ * service for getting api call for rxjs usage
+ */
 @Injectable({
   providedIn: 'root'
 })
