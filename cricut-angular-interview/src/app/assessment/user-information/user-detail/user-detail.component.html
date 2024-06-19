@@ -1,7 +1,8 @@
 <app-card>
   <article>
     <h1>{{ detail.title }}</h1>
-    <time>{{ detail.dueDate }}</time>
+<!--    date pipe example-->
+    <time>{{ detail.dueDate | date: 'fullDate' }}</time>
     <p>{{ detail.summary }}</p>
     <p class="actions">
       <button (click)="onDelete()">Delete</button>

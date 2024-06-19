@@ -1,5 +1,5 @@
 @if (isAddDetail) {
-  <app-add-detail (cancel)="onCancel()" (add)="onAdd($event)" />
+  <app-add-detail [userId]="id" (close)="onCancel()" (add)="onAdd($event)" />
 }
 <section id="user">
   <header>
