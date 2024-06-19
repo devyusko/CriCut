@@ -1,7 +1,10 @@
-import {Component, EventEmitter, Input, output, Output} from '@angular/core';
-// import { MOCK_USERS } from '../mock-users'
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {NgForOf} from "@angular/common";
 import {CardComponent} from "../shared/card/card.component";
+
+/**
+ * user component messing with signals a bit
+ */
 
 type User = {
   id: string;

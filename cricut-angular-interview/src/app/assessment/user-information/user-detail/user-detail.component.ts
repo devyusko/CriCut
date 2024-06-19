@@ -1,6 +1,11 @@
-import {Component, EventEmitter, Input, Output} from "@angular/core";
+import {Component, inject, Input} from "@angular/core";
 import {CardComponent} from "../../shared/card/card.component";
 import {DatePipe} from "@angular/common";
+import {UserService} from "../user.service";
+
+/**
+ * user detail component
+ */
 
 type TDetails = {
   id: string,
@@ -18,10 +23,10 @@ type TDetails = {
 })
 export class UserDetailComponent {
   @Input({ required:true }) detail!: TDetails;
-  @Output() complete = new EventEmitter<string>();
+  private userService = inject(UserService)
 
   onDelete() {
-    this.complete.emit(this.detail.id);
+    this.userService.deleteUser(this.detail.id);
     console.log(this.detail.id);
   }
 }

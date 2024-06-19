@@ -4,7 +4,9 @@ import {UserComponent} from "./user/user.component";
 import {MOCK_USERS} from "./mock-users";
 import {UserInformationComponent} from "./user-information/user-information.component";
 
-
+/**
+ * root assessment component. Has the main landing page
+ */
 @Component({
   selector: 'app-assessment',
   standalone: true,

@@ -1,7 +1,10 @@
 import {Component, EventEmitter, inject, Input, Output} from "@angular/core";
 import {FormsModule} from "@angular/forms";
-import {type TAddDetail} from "./add-detail.model";
 import {UserService} from "../user.service";
+
+/**
+ * add user detail component
+ */
 
 @Component({
   selector: 'app-add-detail',
@@ -14,7 +17,7 @@ export class AddDetailComponent {
   protected readonly oncancel = oncancel;
   @Input({required: true}) userId!: string;
   @Output() close = new EventEmitter<void>();
-  @Output() add = new EventEmitter<TAddDetail>()
+  // @Output() add = new EventEmitter<TAddDetail>()
   title = '';
   summary = '';
   dueDate = '';

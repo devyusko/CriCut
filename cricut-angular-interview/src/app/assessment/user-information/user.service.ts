@@ -1,6 +1,10 @@
 import {TAddDetail} from "./add-detail/add-detail.model";
 import {Injectable} from "@angular/core";
 
+/**
+ * user service for sharing user data
+ */
+
 @Injectable({providedIn: 'root'})
 export class UserService {
   private userDetails = [

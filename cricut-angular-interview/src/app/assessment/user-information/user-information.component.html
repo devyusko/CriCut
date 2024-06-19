@@ -1,5 +1,5 @@
 @if (isAddDetail) {
-  <app-add-detail [userId]="id" (close)="onCancel()" (add)="onAdd($event)" />
+  <app-add-detail [userId]="id" (close)="onCancel()" />
 }
 <section id="user">
   <header>
@@ -13,7 +13,7 @@
   <ul>
     @for (detail of selectedUserDetails; track detail.id) {
       <li>
-        <app-user-detail [detail]="detail" (complete)="onDelete($event)"></app-user-detail>
+        <app-user-detail [detail]="detail" ></app-user-detail>
       </li>
     }
   </ul>

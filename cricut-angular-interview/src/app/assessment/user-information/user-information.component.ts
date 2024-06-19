@@ -4,6 +4,9 @@ import {AddDetailComponent} from "./add-detail/add-detail.component";
 import {type TAddDetail} from "./add-detail/add-detail.model";
 import {UserService} from "./user.service";
 
+/**
+ * user information component which is the parent component
+ */
 @Component({
   selector: 'app-user-information',
   styleUrls: ['user-information.component.less'],
