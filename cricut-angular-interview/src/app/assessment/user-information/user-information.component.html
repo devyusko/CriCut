@@ -1,7 +1,7 @@
 @if (isAddDetail) {
   <app-add-detail [userId]="id" (close)="onCancel()" />
 } @else if (isPostDetail) {
-  <app-post-detail (close)="onCancel()" />
+  <app-post-detail [userId]="id" (close)="onCancel()" />
 }
 <section id="user">
   <header>
