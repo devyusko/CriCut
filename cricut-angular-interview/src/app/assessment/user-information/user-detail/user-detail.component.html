@@ -6,7 +6,7 @@
     <p>{{ detail.summary }}</p>
     <b>Sensitive Information: </b>
 <!--    privacy filter custom pipe-->
-    <p [innerHTML]="detail.pDetail | privacyFilter:'user'"></p>
+    <p [innerHTML]="detail.pDetail | privacyFilter:'admin'"></p>
     <p class="actions">
       <button (click)="onDelete()">Delete</button>
     </p>

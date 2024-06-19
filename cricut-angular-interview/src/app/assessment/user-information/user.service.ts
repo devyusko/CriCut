@@ -9,8 +9,8 @@ import {Injectable} from "@angular/core";
 export class UserService {
   private userDetails = [
     {
-      id: 't1',
-      userId: 'u1',
+      id: '1',
+      userId: '1',
       title: 'Master Angular',
       summary:
         'Learn all the basic and advanced features of Angular & how to apply them.',
@@ -19,17 +19,17 @@ export class UserService {
       dueDate: '2025-12-31',
     },
     {
-      id: 't2',
-      userId: 'u3',
+      id: '2',
+      userId: '3',
       title: 'Build first prototype',
       summary: 'Build a first prototype of the online shop website',
       pDetail:
-        'loves does but hates cats',
+        'loves dogs but hates cats',
       dueDate: '2024-05-31',
     },
     {
-      id: 't3',
-      userId: 'u3',
+      id: '3',
+      userId: '3',
       title: 'Prepare issue template',
       summary:
         'Prepare and describe an issue template which will help with project management',

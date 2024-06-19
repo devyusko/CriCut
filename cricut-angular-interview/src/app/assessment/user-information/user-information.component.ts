@@ -3,6 +3,7 @@ import {UserDetailComponent} from "./user-detail/user-detail.component";
 import {AddDetailComponent} from "./add-detail/add-detail.component";
 import {type TAddDetail} from "./add-detail/add-detail.model";
 import {UserService} from "./user.service";
+import {PostDetailComponent} from "./posts-detail/post-detail.component";
 
 /**
  * user information component which is the parent component
@@ -13,7 +14,8 @@ import {UserService} from "./user.service";
   templateUrl: 'user-information.component.html',
   imports: [
     UserDetailComponent,
-    AddDetailComponent
+    AddDetailComponent,
+    PostDetailComponent
   ],
   standalone: true
 })
@@ -22,6 +24,7 @@ export class UserInformationComponent {
   @Input({ required: true }) name!: string;
 
   isAddDetail = false;
+  isPostDetail = false;
 
   get selectedUserDetails() {
     return this.userService.getUserDetail(this.id);
@@ -37,8 +40,13 @@ export class UserInformationComponent {
     this.isAddDetail = true;
   }
 
+  onPostDetail() {
+    this.isPostDetail = true;
+  }
+
   onCancel() {
     this.isAddDetail = false;
+    this.isPostDetail = false;
   }
 
   onAdd(addDetail: TAddDetail) {

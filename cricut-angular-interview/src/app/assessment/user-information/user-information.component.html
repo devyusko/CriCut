@@ -1,10 +1,15 @@
 @if (isAddDetail) {
   <app-add-detail [userId]="id" (close)="onCancel()" />
+} @else if (isPostDetail) {
+  <app-post-detail (close)="onCancel()" />
 }
 <section id="user">
   <header>
     <h2>{{ name }}'s Information</h2>
     <menu>
+      <button (click)="onPostDetail()">
+        Posts
+      </button>
       <button (click)="onAddDetail()">
         Add Info
       </button>
