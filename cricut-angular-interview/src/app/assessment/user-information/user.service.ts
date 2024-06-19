@@ -14,6 +14,8 @@ export class UserService {
       title: 'Master Angular',
       summary:
         'Learn all the basic and advanced features of Angular & how to apply them.',
+      pDetail:
+        'hates spiders and has weird liking for balloons',
       dueDate: '2025-12-31',
     },
     {
@@ -21,6 +23,8 @@ export class UserService {
       userId: 'u3',
       title: 'Build first prototype',
       summary: 'Build a first prototype of the online shop website',
+      pDetail:
+        'loves does but hates cats',
       dueDate: '2024-05-31',
     },
     {
@@ -29,6 +33,8 @@ export class UserService {
       title: 'Prepare issue template',
       summary:
         'Prepare and describe an issue template which will help with project management',
+      pDetail:
+        'none',
       dueDate: '2024-06-15',
     },
   ];
@@ -43,6 +49,7 @@ export class UserService {
       userId: userId,
       title: userData.title,
       summary: userData.summary,
+      pDetail: userData.pDetail,
       dueDate: userData.date
     });
   }

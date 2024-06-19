@@ -21,6 +21,7 @@ export class AddDetailComponent {
   title = '';
   summary = '';
   dueDate = '';
+  pDetail = '';
   private userService = inject(UserService);
   onCancel() {
     this.close.emit();
@@ -30,6 +31,7 @@ export class AddDetailComponent {
     this.userService.addUserDetail({
       title: this.title,
       summary: this.summary,
+      pDetail: this.pDetail,
       date: this.dueDate
     }, this.userId);
     this.close.emit();
